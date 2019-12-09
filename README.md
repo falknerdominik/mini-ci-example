@@ -1,3 +1,5 @@
+https://travis-ci.org/falknerdominik/mini-ci-example.svg?branch=master
+
 # Exercise 2.1: Setup Continuous Integration
 
 In this exercise, you will set up a *Continuous Integration* (CI) workflow using GitHub as a version control system, Travis CI as a build tool, and DockerHub as artifact repository manager. This workflow will execute the unit tests of the source code and build the code. To trigger it, a change of the codebase has to be performed. 

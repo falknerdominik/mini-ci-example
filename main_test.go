@@ -3,7 +3,7 @@ package main
 import "testing"
 
 func TestGetMinuteUp(t *testing.T) {
-
+	t.Error("getMinute(1, 30) = d; wanted 2")
 	res := getMinute(1, 30)
 	if res != 2 {
 		t.Errorf("getMinute(1, 30) = %d; wanted 2", res)

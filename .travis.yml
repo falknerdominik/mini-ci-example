@@ -15,12 +15,12 @@ script:
   - env GOOS=linux GOARCH=amd64 go build -o demo
   # docker login
   - echo "$REGISTRY_PASSWORD" | docker login --username $REGISTRY_USER --password-stdin
-  - docker build -f Dockerfile -t ${REGISTRY_USER}/demo:latest ./
+  - docker build -f Dockerfile -t kuwiano/demo:latest ./
 
   # tag
   - GIT_SHA="$(git rev-parse --short HEAD)"
-  - docker tag ${REGISTRY_USER}/demo:latest ${REGISTRY_USER}/demo:$GIT_SHA
+  - docker tag kuwiano/demo:latest kuwiano/demo:$GIT_SHA
 
   # push
-  - docker push YOUR-DOCKERHUB-ACCOUNT/demo:latest
-  - docker push YOUR-DOCKERHUB-ACCOUNT/demo:$GIT_SHA
+  - docker push kuwiano/demo:latest
+  - docker push kuwiano/demo:$GIT_SHA

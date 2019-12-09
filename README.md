@@ -1,4 +1,4 @@
-![https://travis-ci.org/falknerdominik/mini-ci-example.svg?branch=master](Build Status)
+![Build Status](https://travis-ci.org/falknerdominik/mini-ci-example.svg?branch=master)
 
 # Exercise 2.1: Setup Continuous Integration
 

@@ -12,7 +12,7 @@ script:
   # Test the code
   - go test -v ./...
   # Build the code 
-  - env GOOS=linux GOARCH=amd64 go build -o demo
+  - env GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o demo
   # docker login
   - echo "$REGISTRY_PASSWORD" | docker login --username $REGISTRY_USER --password-stdin
   - docker build -f Dockerfile -t kuwiano/demo:latest ./
